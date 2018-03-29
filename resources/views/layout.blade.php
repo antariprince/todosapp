@@ -8,15 +8,12 @@
         <title>Todos App</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="{{ asset('app/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
         <link href="{{ asset('app/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
         <!-- Styles -->
         <style>
             html, body {
                 background: #313131 url(../images/bg10.jpg) center;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
                 height: 100vh;
                 margin: 0;
             }
@@ -31,9 +28,7 @@
                 justify-content: center;
             }
 
-            .position-ref {
-                position: relative;
-            }
+           
 
             .top-right {
                 position: absolute;
@@ -49,8 +44,12 @@
                 font-size: 24px;
             }
 
+            .maintitle {
+                font-size: 84px;
+            }
+
             .links > a {
-                color: #636b6f;
+                color: #c53f3f;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -59,11 +58,19 @@
                 text-transform: uppercase;
             }
 
+            a {
+                color: #c53f3f;
+            }
+
+            a:hover{
+                color: #A13435;
+            }
+
             .m-b-md {
                 margin-bottom: 30px;
             }
         </style>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        
     </head>
     <body>
       @if(Session::has('success'))
