@@ -5,15 +5,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Our Own New View</title>
+        <title>Todos App</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link href="{{ asset('app/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background: #313131 url(../images/bg10.jpg) center;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;

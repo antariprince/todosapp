@@ -21,19 +21,17 @@
             <div class="col-lg-9">
                 <p>{{$todo->todo}}</p>
             </div>
-            <div class="col-sm-1">
-                <a href="{{ route('todo.delete',['id' => $todo->id])}}" class="btn btn-danger">X</a>
-            </div>
-            <div class="col-sm-1">
+            
+            <div class="col-sm-3 center-block">
                 @if(!$todo->completed)
-                <a href="{{ route('todo.completed',['id' => $todo->id])}}" class="btn btn-success btn-xs">&#10004;</a>
-                @else
-                <span class="text-success">&#10004;</span>
+                <a href="{{ route('todo.completed',['id' => $todo->id])}}" class="btn btn-success btn-xs"><i class="fa fa-check"></i></a>
+                @else 
+                <a href="javascript:void(0)" class="btn btn-light btn-xs"><i class="fa fa-check"></i></a>
                 @endif
+                <a href="{{ route('todo.update',['id' => $todo->id])}}" class="btn btn-info btn-xs"><i class="fa fa-edit"></i></a>
+                <a href="{{ route('todo.delete',['id' => $todo->id])}}" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>
             </div>
-            <div class="col-sm-1">
-                <a href="{{ route('todo.update',['id' => $todo->id])}}" class="btn btn-info btn-xs">&#10000;</a>
-            </div>                
+             
             </div>
             <hr>
     @endforeach
